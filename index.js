@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 require('./routes/storeRouter')(app);
+require('./routes/orderRouter')(app);
 
 // initializing the server
 const PORT = process.env.PORT || 5000;

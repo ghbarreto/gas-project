@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import RenderProducts from './products/Products';
 import Header from './Header';
 import ConfirmOrder from './products/ConfirmOrder';
+import OrdersPlaceholder from './orders/OrdersPlaceholder';
 
 import Orders from './orders/Orders';
 import ShowDbValues from './db-values/ShowDbValues';
@@ -15,6 +16,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Header />
           <ShowDbValues />
+          <OrdersPlaceholder />
           <Route exact path="/" component={RenderProducts} />
           <Route exact path="/orders" component={Orders} />
           <Route exact path="/orders/confirm" component={ConfirmOrder} />

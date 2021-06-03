@@ -69,7 +69,6 @@ class Products extends React.Component {
   };
 
   renderProducts() {
-    console.log(this.props);
     if (this.props.products.product) {
       return this.props.products.product.map(product => {
         return (

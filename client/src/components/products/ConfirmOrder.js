@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
@@ -7,7 +8,6 @@ const ConfirmOrder = props => {
     props.fetchProducts();
   }, []);
   const displayOrder = () => {
-    console.log(props.location.state.values);
     const { product } = props.products;
     const values = props.location.state;
     if (product) {
@@ -26,11 +26,15 @@ const ConfirmOrder = props => {
                 <div>Pagamento - {e.PaymentType} </div>
                 <div>Taxas - {e.addedPrice} </div>
                 <div>Total: {parseInt(e.total) + parseInt(e.addedPrice)} </div>
-                <button
-                  onClick={() => props.submitOrder(props.location.state.values)}
-                >
-                  Confirmar Pedido
-                </button>
+                <Link to="/">
+                  <button
+                    onClick={() =>
+                      props.submitOrder(props.location.state.values)
+                    }
+                  >
+                    Confirmar Pedido
+                  </button>
+                </Link>
                 <button>Voltar</button>
               </div>
             );

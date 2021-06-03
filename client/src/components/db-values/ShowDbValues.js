@@ -1,24 +1,22 @@
-import _ from "lodash";
-import React from "react";
-import { connect } from "react-redux";
-import * as actions from "../../actions";
+import _ from 'lodash';
+import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 class ShowDbValues extends React.Component {
   renderDbValues() {
     if (this.props.values.product) {
       return this.props.values.product.map(e => {
         return (
-          <div key={e}>
+          <div key={e} style={{ backgroundColor: 'lavender' }}>
             <div
-              className="card-panel grey center lighten-2"
               style={{
-                display: "flex",
-                justifyContent: "space-around",
-                marginTop: "-10px",
-                fontSize: "20px",
-                fontWeight: "bold",
-                boxShadow: "0px 0px 0px 0px",
-                marginBottom: "-20px",
+                display: 'flex',
+                justifyContent: 'space-around',
+                fontSize: '20px',
+                fontWeight: 'bold',
+                boxShadow: '0px 0px 0px 0px',
+                marginBottom: '-20px',
               }}
             >
               <p key={e.price}>Gas comum: R${e.price}</p>
@@ -30,15 +28,15 @@ class ShowDbValues extends React.Component {
             <div
               className="card-panel grey center lighten-2"
               style={{
-                display: "flex",
-                justifyContent: "space-around",
-                marginTop: "-10px",
-                fontSize: "20px",
-                fontWeight: "bold",
+                display: 'flex',
+                justifyContent: 'space-around',
+                marginTop: '20px',
+                fontSize: '20px',
+                fontWeight: 'bold',
               }}
             >
-              <p style={{ color: "red" }}>Estoque: {e.gasAmount}</p>
-              <p style={{ color: "red" }}>Vazios: {e.emptyGas}</p>
+              <p style={{ color: 'red' }}>Estoque: {e.gasAmount}</p>
+              <p style={{ color: 'red' }}>Vazios: {e.emptyGas}</p>
             </div>
           </div>
         );

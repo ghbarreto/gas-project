@@ -1,4 +1,5 @@
 const Product = require('../models/Product');
+const PlaceOrder = require('../models/PlaceOrder');
 const util = require('util');
 
 module.exports = app => {
@@ -9,7 +10,16 @@ module.exports = app => {
   });
 
   app.post('/api/orders', async (req, res) => {
-    console.log(req.body);
-    res.send('a');
+    const val = req.body.total + parseInt(req.body.addedPrice);
+
+    const placeOrder = await PlaceOrder({
+      fullGas: req.body.fullGas,
+      regularGas: req.body.regularGas,
+      DeliverOrTakeout: req.body.DeliveryOrTakeout,
+      price: val,
+      dateCreated: Date.now(),
+    });
+
+    placeOrder.save();
   });
 };
