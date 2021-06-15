@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-import { a } from './dateFormat';
+import { dateFormatBR } from './dateFormat';
 
 class OrdersPlaceholder extends React.Component {
   componentDidMount() {
@@ -17,7 +17,7 @@ class OrdersPlaceholder extends React.Component {
             <td>{e.regularGas}</td>
             <td>{e.fullGas}</td>
             <td>{e.DeliverOrTakeout}</td>
-            <td>{a(e.dateCreated, ' dddd, d mmmm, yyyy')}</td>
+            <td>{dateFormatBR(e.dateCreated, ' dddd, d mmmm, yyyy')}</td>
             <td>{e.price}</td>
             <td>
               <button className="btn btn-success">Confirmar</button>
