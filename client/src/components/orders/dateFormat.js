@@ -1,6 +1,10 @@
 import dateFormat from 'dateformat';
 
+<<<<<<< HEAD
 export const dateBrazil = (date, options) => {
+=======
+export const dateFormatBR = (date, options) => {
+>>>>>>> 23a4f0232145785ba766da00f11d57d9f24c7d7f
   dateFormat.i18n = {
     dayNames: [
       'Dom',
