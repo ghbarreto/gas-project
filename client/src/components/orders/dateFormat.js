@@ -1,6 +1,6 @@
 import dateFormat from 'dateformat';
 
-export const a = (date, options) => {
+export const dateBrazil = (date, options) => {
   dateFormat.i18n = {
     dayNames: [
       'Dom',

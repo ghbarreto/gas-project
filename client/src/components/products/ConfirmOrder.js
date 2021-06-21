@@ -7,6 +7,7 @@ const ConfirmOrder = props => {
   useEffect(() => {
     props.fetchProducts();
   }, []);
+
   const displayOrder = () => {
     const { product } = props.products;
     const values = props.location.state;

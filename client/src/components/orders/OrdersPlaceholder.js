@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-import dateFormat from 'dateformat';
-import { a } from './dateFormat';
+import { dateBrazil } from './dateFormat';
 
 class OrdersPlaceholder extends React.Component {
   componentDidMount() {
@@ -18,7 +17,7 @@ class OrdersPlaceholder extends React.Component {
             <td>{e.regularGas}</td>
             <td>{e.fullGas}</td>
             <td>{e.DeliverOrTakeout}</td>
-            <td>{a(e.dateCreated, ' dddd, d mmmm, yyyy')}</td>
+            <td>{dateBrazil(e.dateCreated)}</td>
             <td>{e.price}</td>
             <td>
               <button className="btn btn-success">Confirmar</button>
@@ -34,11 +33,8 @@ class OrdersPlaceholder extends React.Component {
   }
   render() {
     return (
-      <table
-        class="table table-dark"
-        style={{ width: '80%', margin: '20px auto' }}
-      >
-        <thead>
+      <table className="table " style={{ width: '80%', margin: '20px auto' }}>
+        <thead className="thead-dark">
           <tr>
             <th scope="col">Gas</th>
             <th scope="col">Gas Inteiro</th>

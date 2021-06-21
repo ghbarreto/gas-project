@@ -7,8 +7,9 @@ module.exports = app => {
     res.send({ product });
   });
 
-  app.post('/api/orders/confirm', async (req, res) => {
+  app.post('/api/orders/confirm/:id', async (req, res) => {
     const val = req.body.total + parseInt(req.body.addedPrice);
+    console.log(val);
     res.send('hi');
   });
 };
