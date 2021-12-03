@@ -8,8 +8,8 @@ const Header = () => {
         Santos & Vieira
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="/">Inicio</Nav.Link>
-        <Nav.Link href="/orders">Pedidos</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/orders">Orders</Nav.Link>
         <Nav.Link href="/admin/panel">Admin</Nav.Link>
       </Nav>
     </Navbar>

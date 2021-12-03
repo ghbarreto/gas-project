@@ -23,7 +23,7 @@ class DeliveryOrTakeout extends React.Component {
       <div>
         <hr></hr>
         <label>
-          <h4>Tipo de Entrega</h4>
+          <h4>Delivery</h4>
         </label>
         <div
           style={{
@@ -38,7 +38,7 @@ class DeliveryOrTakeout extends React.Component {
               type="radio"
               value="Portaria"
             />
-            Portaria
+            Takeout
           </label>
           <label>
             <Field
@@ -54,7 +54,7 @@ class DeliveryOrTakeout extends React.Component {
         <div>
           <hr></hr>
           <label>
-            <h4>Tipo de Pagamento</h4>
+            <h4>Payment</h4>
           </label>
           <div
             style={{
@@ -69,7 +69,7 @@ class DeliveryOrTakeout extends React.Component {
                 type="radio"
                 value="Cartao"
               />
-              Cartao
+              Credit Card
             </label>
             <label>
               <Field
@@ -78,12 +78,12 @@ class DeliveryOrTakeout extends React.Component {
                 type="radio"
                 value="Dinheiro"
               />
-              Dinheiro
+              Cash
             </label>
           </div>
           <hr></hr>
           <div>
-            <label>Custos Adicionais</label>
+            <label>Additional Taxes</label>
             <div>
               <Field
                 name="addedPrice"

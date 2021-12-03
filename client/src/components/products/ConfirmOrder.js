@@ -16,16 +16,16 @@ const ConfirmOrder = props => {
         <div>
           {Object.values(values).map(e => {
             return (
-              <div key="receipt">
+              <div key="receipt" style={{textAlign: 'center'}}>
                 <div>
-                  Gas Inteiro R${product[0].fullPrice} || Qty {e.fullGas}{' '}
+                  Premium Gas R${product[0].fullPrice} || Quantity {e.fullGas}{' '}
                 </div>
                 <div>
-                  Gas Normal R${product[0].price} || Qty {e.regularGas}{' '}
+                  Common Gas R${product[0].price} || Quantity {e.regularGas}{' '}
                 </div>
-                <div>Entrega - {e.DeliveryOrTakeout} </div>
-                <div>Pagamento - {e.PaymentType} </div>
-                <div>Taxas - {e.addedPrice} </div>
+                <div>Delivery - {e.DeliveryOrTakeout} </div>
+                <div>Payment - {e.PaymentType} </div>
+                <div>Taxes - {e.addedPrice} </div>
                 <div>Total: {parseInt(e.total) + parseInt(e.addedPrice)} </div>
                 <Link to="/">
                   <button
@@ -33,10 +33,10 @@ const ConfirmOrder = props => {
                       props.submitOrder(props.location.state.values)
                     }
                   >
-                    Confirmar Pedido
+                    Confirm
                   </button>
                 </Link>
-                <button>Voltar</button>
+                <button>Return</button>
               </div>
             );
           })}
@@ -48,7 +48,7 @@ const ConfirmOrder = props => {
 
   return (
     <div>
-      <h2>Confirmar Pedido</h2>
+      <h2 style={{textAlign: 'center'}}>Confirmar Pedido</h2>
       {displayOrder()}
     </div>
   );

@@ -19,10 +19,10 @@ class ShowDbValues extends React.Component {
                 marginBottom: '-20px',
               }}
             >
-              <p key={e.price}>Gas comum: R${e.price}</p>
-              <p key={e.fullPrice}>Gas inteiro:R${e.fullPrice}</p>
-              <p key={e.deliveryPrice}>Entrega: R${e.deliveryPrice}</p>
-              <p key={e.takeoutPrice}>Portaria: R${e.takeoutPrice}</p>
+              <p key={e.price}>Common gas: R${e.price}</p>
+              <p key={e.fullPrice}>Premium gas:R${e.fullPrice}</p>
+              <p key={e.deliveryPrice}>Delivery: R${e.deliveryPrice}</p>
+              <p key={e.takeoutPrice}>Takeout: R${e.takeoutPrice}</p>
             </div>
 
             <div
@@ -35,8 +35,8 @@ class ShowDbValues extends React.Component {
                 fontWeight: 'bold',
               }}
             >
-              <p style={{ color: 'red' }}>Estoque: {e.gasAmount}</p>
-              <p style={{ color: 'red' }}>Vazios: {e.emptyGas}</p>
+              <p style={{ color: 'red' }}>Stock: {e.gasAmount}</p>
+              <p style={{ color: 'red' }}>Empty gas: {e.emptyGas}</p>
             </div>
           </div>
         );

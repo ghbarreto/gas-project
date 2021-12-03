@@ -184,7 +184,7 @@ class Products extends React.Component {
                     <p className="right">Total: R${this.addingTotal()}</p>
                   </div>
                   <button type="submit" className="right" variant="primary ">
-                    Fazer Pedido
+                    Order
                   </button>
                 </Card.Body>
               </Card>

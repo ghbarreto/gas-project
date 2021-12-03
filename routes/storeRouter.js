@@ -1,6 +1,5 @@
 const Product = require('../models/Product');
 const PlaceOrder = require('../models/PlaceOrder');
-const util = require('util');
 
 module.exports = app => {
   app.get('/api/products', async (req, res) => {
