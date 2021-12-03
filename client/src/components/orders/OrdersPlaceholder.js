@@ -20,10 +20,10 @@ class OrdersPlaceholder extends React.Component {
             <td>{dateFormatBR(e.dateCreated, ' dddd, d mmmm, yyyy')}</td>
             <td>{e.price}</td>
             <td>
-              <button className="btn btn-success">Confirmar</button>
+              <button className="btn btn-success">Confirm</button>
             </td>
             <td>
-              <button className="btn btn-danger">Cancelar</button>
+              <button className="btn btn-danger">Cancel</button>
             </td>
           </tr>
         );
