@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const keys = require('./config/access_keys');
+const PORT = process.env.PORT || 5000;
 
 // connecting to the database
 mongoose.connect(keys.mongoURI, {
@@ -27,7 +28,6 @@ require('./routes/storeRouter')(app);
 require('./routes/orderRouter')(app);
 
 // initializing the server
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log('Server is running on port:', PORT);
 });
